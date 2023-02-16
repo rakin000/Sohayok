@@ -3,10 +3,6 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const logger = require('morgan');
-const cors = require('cors')
-const helmet = require('helmet')
-require('dotenv').config()
 
 // middlewares/
 const errorHandling = require('./middlewares/errorHandling');
@@ -14,7 +10,7 @@ const auth = require('./middlewares/auth').auth;
 
 // router
 const router = require('./router/indexRouter');
-const adminRouter = require('./router/adminIndexRouter');
+// const adminRouter = require('./router/adminIndexRouter');
 // app creation
 const app = express();
 
@@ -34,7 +30,7 @@ app.use(express.static('public'))
 
 //app.set('strict routing', true);
 // using router
-app.use('/admin', adminRouter);
+// app.use('/admin', adminRouter);
 app.use(auth);
 app.use('/', router);
 
