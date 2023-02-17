@@ -10,6 +10,7 @@ const auth = require('./middlewares/auth').auth;
 
 // router
 const router = require('./router/indexRouter');
+const providerRouter = require('./router/ProviderIndexRouter');
 // const adminRouter = require('./router/adminIndexRouter');
 // app creation
 const app = express();
@@ -30,8 +31,9 @@ app.use(express.static('public'))
 
 //app.set('strict routing', true);
 // using router
-// app.use('/admin', adminRouter);
-app.use(auth);
+
+
+app.use('/provider', providerRouter);
 app.use('/', router);
 
 

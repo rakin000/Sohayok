@@ -24,6 +24,9 @@ const logoutRouter = require('./auth/logout');
 // const mywishListRouter = require('./My-Section/wishlist');
 
 
+const auth = require('../middlewares/auth').auth;
+
+router.use(auth);
 
 // ROUTE: home page
 router.get('/', async (req, res) =>{
