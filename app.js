@@ -9,7 +9,7 @@ const errorHandling = require('./middlewares/errorHandling');
 const auth = require('./middlewares/auth').auth;
 
 // router
-const router = require('./router/indexRouter');
+const router = require('./router/IndexRouter');
 const providerRouter = require('./router/ProviderIndexRouter');
 // const adminRouter = require('./router/adminIndexRouter');
 // app creation
