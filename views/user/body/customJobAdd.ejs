@@ -1,0 +1,51 @@
+
+
+<div class="mt-5">
+
+
+
+    <div class="shadow p-3 mb-3 mt-3">
+        <h3>Add Custom Job</h3>
+
+    </div>
+    <div  class="shadow p-3 mb-3 mt-3">
+        <form action="/job/custom/add" method="post">
+            <h3>Main Info</h3>
+            <div class="mb-3">
+                <label for="jobTitleInput">Job Title</label>
+                <input required type="text" name="title" value="" class="form-control"
+                       id="jobTitleInput" placeholder="Enter the Job title...">
+            </div>
+
+            <div class="mb-3">
+                <label for="jobCategoryInput">Job Category</label>
+                <select id="jobCategoryInput" name="category" class="form-select m-1">
+                    <option value="0" selected="">Custom</option>
+                    <option value="1">AC Repair</option>
+                    <option value="2">Appliance Repair</option>
+                    <option value="3">Trips and Travels</option>
+                    <option value="4">Shifting</option>
+                    <option value="5">Beauty and Salon</option>
+                    <option value="6">Car Care Service</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="jobDescriptionInput">Job Description</label>
+                <input required type="text" name="description" value="" class="form-control"
+                       id="jobDescriptionInput" placeholder="Enter the job description">
+            </div>
+            <div class="mb-3">
+                <label for="jobBidInput">Job Expected Payment</label>
+                <input required type="number" name="amount" value="" class="form-control"
+                       id="jobBidInput" placeholder="Enter the expected payment...">
+            </div>
+            <hr>
+
+            <button class="btn btn-danger" type="submit">POST JOB</button>
+            <a class="btn btn-secondary" href="/">Cancel</a>
+        </form>
+    </div>
+
+
+</div>

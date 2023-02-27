@@ -1,0 +1,33 @@
+
+<div class="shadow p-3 mb-3 mt-3">
+    <h3>All Posted Custom Jobs</h3>
+
+</div>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Category</th>
+        <th scope="col">Initial</th>
+    </tr>
+    </thead>
+    <% for(let i = 0;i < jobs.length;i++){ %>
+        <tr >
+            <th scope="row"><%= i+1 %></th>
+            <td><%= jobs[i].titile %></td>
+            <td >
+                <div style="max-height:40px; max-width: 600px; overflow:hidden"><%= jobs[i].description %></div>
+            </td>
+            <td><%= jobs[i].category %></td>
+            <td><%= jobs[i].initial_amount %></td>
+            <td>
+                <div class="d-grid">
+                    <a class="btn btn-primary btn-sm mb-1" href=<%="/job/custom/"+jobs[i].custom_job_id%>>View</a><br/>
+                </div>
+            </td>
+        </tr>
+    <% } %>
+</table>

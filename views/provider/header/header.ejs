@@ -3,12 +3,23 @@
     <div class="container-fluid">
         <!-- Logo -->
 
-        <a class="navbar-brand" href="/">
-            <img src="/images/squirrel.png" alt="Squirrel" height="50px">
-        </a>
-        <!-- Prompt -->
         <div>
-<!--            <a href="/login">Login</a> | <a href="signup">Sign up</a>-->
+            <a class="navbar-brand" href="/provider/">
+                Shohayok Provider
+            </a>
+            <a>
+                Home
+            </a>
+        </div>
+        <!-- Prompt -->
+        <div class="row">
+            <a class="btn btn-primary col m-1" href="/provider/job/bid/">Bids</a>
+            <a class="btn btn-primary col m-1" href="/provider/job/order/">Orders</a>
+            <div class="col m-1">
+                <form  action="/provider/logout" method="POST" class="my-logout-form">
+                    <input type="submit" value="Sign Out" class="btn  my-non-btn">
+                </form>
+            </div>
         </div>
     </div>
 </nav>

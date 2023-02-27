@@ -1,0 +1,39 @@
+
+
+<div class="mt-5">
+
+    <div class="shadow p-3 mb-3 mt-3">
+        <h3>Add Bid</h3>
+
+    </div>
+    <div  class="shadow p-3 mb-3 mt-3">
+        <form action="/provider/job/bid/add" method="post">
+            <h3>Main Info</h3>
+            <div class="mb-3">
+                <div>Job Title</div>
+                <div id="jobTitleInput" > <%= job.title %> </div>
+            </div>
+            <div class="mb-3">
+                <div>Job Description</div>
+                <div id="jobTitleInput" > <%= job.description %> </div>
+            </div>
+            <div class="mb-3">
+                <div>Poster Bid</div>
+                <div id="jobTitleInput" > TK. <%= job.initial_amount %> </div>
+            </div>
+            <input hidden type="text" name="custom_job_id" value="<%=job.custom_job_id%>" class="form-control">
+
+            <div class="mb-3">
+                <label for="jobDescriptionInput">Enter Your Bid</label>
+                <input required type="number" name="provider_bid" value="" class="form-control"
+                       id="jobDescriptionInput" placeholder="Enter your bid">
+            </div>
+            <hr>
+
+            <button class="btn btn-danger" type="submit">POST BID</button>
+            <a class="btn btn-secondary" href="/provider">Cancel</a>
+        </form>
+    </div>
+
+
+</div>

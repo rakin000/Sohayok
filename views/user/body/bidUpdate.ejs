@@ -1,0 +1,50 @@
+
+
+<div class="mt-5">
+
+    <div class="shadow p-3 mb-3 mt-3">
+        <h3>Update Bid</h3>
+
+    </div>
+    <div  class="shadow p-3 mb-3 mt-3">
+        <form action="/job/bid/update" method="post">
+            <h3>Main Info</h3>
+            <div class="mb-3">
+                <div>Job Title</div>
+                <div id="jobTitleInput" > <%= job.title %> </div>
+            </div>
+            <div class="mb-3">
+                <div>Job Description</div>
+                <div id="jobTitleInput" > <%= job.description %> </div>
+            </div>
+            <div class="mb-3">
+                <div>Your Bid</div>
+                <div id="jobTitleInput" > TK. <%= bid.user_bid %> </div>
+            </div>
+            <div class="mb-3">
+                <div>Provider Bid</div>
+                <div id="jobTitleInput" > TK. <%= bid.provider_bid %> </div>
+            </div>
+            <input hidden type="text" name="custom_job_id" value="<%=job.custom_job_id%>" class="form-control">
+            <input hidden type="text" name="bid_id" value="<%=bid.bid_id%>" class="form-control">
+            <div class="mb-3">
+                <label for="jobDescriptionInput">Enter Your New Bid</label>
+                <input required type="number" name="user_bid" value="" class="form-control"
+                       id="jobDescriptionInput" placeholder="Enter the updated bid">
+            </div>
+            <hr>
+
+            <button class="btn btn-danger" type="submit">UPDATE BID</button>
+            <a class="btn btn-secondary" href="/">Cancel</a>
+        </form>
+
+        <form action="/job/bid/accept" method="post">
+            <input hidden type="text" name="custom_job_id" value="<%=job.custom_job_id%>" class="form-control">
+            <input hidden type="text" name="bid_id" value="<%=bid.bid_id%>" class="form-control">
+            <button class="btn btn-danger" type="submit">Accept JOB</button>
+        </form>
+
+    </div>
+
+
+</div>

@@ -1,2 +1,22 @@
 
-<h1> Sup provider losers</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Category</th>
+        <th scope="col">Handle</th>
+    </tr>
+    </thead>
+    <% for(let i = 0;i < categories.length;i++){ %>
+        <tr >
+            <th scope="row"><%= i+1 %></th>
+            <td><%= categories[i] %></td>
+            <td>
+                <div class="d-grid">
+                    <a class="btn btn-primary btn-sm mb-1" href=<%="/provider/job/custom/"+i%>>View</a><br/>
+                </div>
+            </td>
+        </tr>
+    <% } %>
+</table>

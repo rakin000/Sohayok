@@ -1,0 +1,28 @@
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">My Bid</th>
+        <th scope="col">Provider Bid</th>
+        <th scope="col">Handle</th>
+    </tr>
+    </thead>
+    <% for(let i = 0;i < bids.length;i++){ %>
+        <tr >
+            <th scope="row"><%= i+1 %></th>
+            <td><%= bids[i].title %></td>
+            <td><%= bids[i].description %></td>
+            <td><%= bids[i].user_bid %></td>
+            <td><%= bids[i].provider_bid %></td>
+            <td>
+                <div class="d-grid">
+                    <a class="btn btn-primary btn-sm mb-1" href=<%="/provider/job/bid/"+bids[i].bid_id%>>View</a><br/>
+                </div>
+            </td>
+        </tr>
+    <% } %>
+</table>

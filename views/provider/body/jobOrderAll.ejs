@@ -1,0 +1,54 @@
+<div class="shadow p-3 mb-3 mt-3">
+    <h3>Job Orders</h3>
+
+</div>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Category</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Status</th>
+        <th scope="col">Update</th>
+    </tr>
+    </thead>
+    <% for(let i = 0;i < jobs.length;i++){ %>
+        <tr >
+            <th scope="row"><%= i+1 %></th>
+            <td><%= jobs[i].title %></td>
+            <td >
+                <div style="max-height:40px; max-width: 600px; overflow:hidden"><%= jobs[i].description %></div>
+            </td>
+            <td><%= jobs[i].category %></td>
+            <td><%= jobs[i].price %></td>
+            <td><%= jobs[i].status %></td>
+        <form method="post" action="/provider/job/order/status">
+            <input hidden name="job_order_id" value="<%=jobs[i].job_order_id%>">
+
+            <td>
+                <select id="jobCategoryInput" name="status" class="form-select m-1">
+                    <option value="-1" selected="">Select</option>
+                    <option value="0" >Pending</option>
+                    <option value="1">On Going</option>
+                    <option value="2">Completed</option>
+                </select>
+            </td>
+            <td>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-warning">UPDATE</button>
+                </div>
+            </td>
+        </tr>
+        </form>
+
+<!--            <td>-->
+<!--                <div class="d-grid">-->
+<!--                    <a class="btn btn-primary btn-sm mb-1" href=<%="/job/order/"+jobs[i].custom_job_id%>>View</a><br/>-->
+<!--                </div>-->
+<!--            </td>-->
+        </tr>
+    <% } %>
+</table>

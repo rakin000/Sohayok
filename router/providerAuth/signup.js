@@ -86,7 +86,7 @@ router.post('/', async (req, res) => {
                     await authUtils.loginProvider(res, result2[0].user_id)
                     // redirect to home page
                     //res.redirect(`/profile/${user.handle}/settings`);
-                    res.redirect('/');
+                    res.redirect('/provider');
                 }
             });
         }

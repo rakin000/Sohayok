@@ -11,8 +11,8 @@ router.post('/', async (req, res) =>{
         // set null in token
         //await DB_auth.updateUserTokenById(req.user.id, null);
     }
-    res.clearCookie("sessionToken");
-    res.redirect('/login');
+    res.clearCookie("providerSessionToken");
+    res.redirect('/provider/login');
 });
 
 module.exports = router;
