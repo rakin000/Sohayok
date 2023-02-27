@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     if(req.user == null){
         const errors = [];
         return res.render('layout.ejs', {
-            title : 'Login - Squirrel',
+            title : 'Login - Shohayok',
             body : ['login'],
             user : null,
             form: {
@@ -60,7 +60,7 @@ router.post('/', async (req, res) => {
             res.redirect('/');
         } else {
             res.render('layout.ejs', {
-                title : 'Login - Squirrel',
+                title : 'Login - Shohayok',
                 body : ['login'],
                 user : null,
                 errors : errors,

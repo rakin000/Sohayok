@@ -61,7 +61,7 @@ router.post('/', async (req, res) => {
             res.redirect('/provider');
         } else {
             res.render('providerLayout.ejs', {
-                title : 'Login - Squirrel',
+                title : 'Login - Shohayok',
                 body : ['login'],
                 user : null,
                 errors : errors,
