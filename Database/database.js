@@ -3,8 +3,8 @@ require('dotenv').config()
 
 
 const client = new Client({
-    connectionString: "postgres://postgres:password@localhost:5432/shohayok?sslmode=disable\n",
-    // connectionString: process.env.DATABASE_URL,
+    // connectionString: "postgres://postgres:password@localhost:5432/shohayok?sslmode=disable\n",
+    connectionString: process.env.DATABASE_URL,
     ssl: {
         rejectUnauthorized: false
     }
