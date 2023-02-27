@@ -7,7 +7,7 @@ const database = require('./Database/database');
 // need to set this for oracledb connection pool
 process.env.UV_THREADPOOL_SIZE = 10;
 
-const port = 4000;
+const port = 4001;
 // const port = process.env.PORT;
 app.listen(port, async () => {
     try{
