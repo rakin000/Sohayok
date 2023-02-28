@@ -9,6 +9,7 @@
         <th scope="col">#</th>
         <th scope="col">My Bid</th>
         <th scope="col">Provider Bid</th>
+        <th scope="col">Provider Name</th>
         <th scope="col">Handle</th>
     </tr>
     </thead>
@@ -17,6 +18,7 @@
             <th scope="row"><%= i+1 %></th>
             <td><%= bids[i].user_bid %></td>
             <td><%= bids[i].provider_bid %></td>
+            <td><%= bids[i].username%></td>
             <td>
                 <div class="d-grid">
                     <a class="btn btn-primary btn-sm mb-1" href=<%="/job/bid/"+bids[i].bid_id%>>View</a><br/>

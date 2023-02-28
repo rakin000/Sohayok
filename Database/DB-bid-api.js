@@ -35,12 +35,13 @@ async function getAllBidByProvider(provider_id){
 async function getBidByJobId(custom_job_id,user_id){
     const sql = `
         SELECT *
-        FROM  bid
-        WHERE custom_job_id= $1 and user_id=$2
+        FROM  bid, app_user
+        WHERE custom_job_id= $1 and bid.user_id=$2 and app_user.user_id=provider_id
         `;
     const params = [custom_job_id,user_id];
 
     const result = await database.execute(sql, params);
+    console.log(result);
     return result;
 }
 

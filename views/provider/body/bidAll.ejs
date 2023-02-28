@@ -6,8 +6,8 @@
         <th scope="col">#</th>
         <th scope="col">Title</th>
         <th scope="col">Description</th>
+        <th scope="col">Client Bid</th>
         <th scope="col">My Bid</th>
-        <th scope="col">Provider Bid</th>
         <th scope="col">Handle</th>
     </tr>
     </thead>
@@ -20,7 +20,7 @@
             <td><%= bids[i].provider_bid %></td>
             <td>
                 <div class="d-grid">
-                    <a class="btn btn-primary btn-sm mb-1" href=<%="/provider/job/bid/"+bids[i].bid_id%>>View</a><br/>
+                    <a class="btn btn-primary btn-sm mb-1" href=<%="/provider/job/bid/"+bids[i].custom_job_id%>>View</a><br/>
                 </div>
             </td>
         </tr>
